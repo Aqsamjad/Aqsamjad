@@ -9,8 +9,8 @@ import UIKit
 
 class Categories2ViewController: UIViewController {
     
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var submitBtn: UIButton!
     
     // declare the function
     var aqsa_call_back: (([String]) -> Void)?
@@ -22,20 +22,21 @@ class Categories2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        submitBtn.layer.cornerRadius = 8
+        
+        roundedMainView(myView: mainView)
     }
     //    MARK:- Back Btn Action
     @IBAction func backBtnAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     //    MARK:- Submit Btn Action
-    @IBAction func submitBtnAction(_ sender: Any) {
+    @IBAction func submitBtnAction(_ sender: UIButton) {
         if selectedIndex.count == 0 {
             asqa_Alert(message: "please select Categories")
         } else {
             // calling of fucntion
             print(selectedCategories)
-            addSelectedCategories()
+            addselectedCategories()
             self.aqsa_call_back?(selectedCategories)
             print(self.selectedCategories)
             self.navigationController?.popViewController(animated: true)
@@ -48,39 +49,52 @@ class Categories2ViewController: UIViewController {
         alertBlankInput.addAction(okAction)
         self.present(alertBlankInput, animated: true, completion: nil)
     }
-    //MARK:-    Function Of Selectd Categories
-    func addSelectedCategories() {
-        for tempIndex in selectedIndex {
-            selectedCategories.append(categories[tempIndex])
-        }
-    }
-   @objc func checkBoxClicked(_ sender:UIButton) {
-        sender.isSelected = sender.isSelected
-        
-        if selectedIndex.contains(sender.tag) {
-            selectedIndex.remove(at: selectedIndex.firstIndex(of: sender.tag) ?? -1)
-        }else{
-            selectedIndex.append(sender.tag)
-        }
-        tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
+    func roundedMainView(myView:UIView) {
+        myView.layer.shadowColor = UIColor.gray.cgColor
+        myView.layer.shadowOpacity = 1
+        myView.layer.shadowOffset = .zero
+        myView.layer.shadowRadius = 1
+        myView.layer.cornerRadius = 0
     }
 }
 //MARK: - Custom Function Extension
 extension Categories2ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+        return categories.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Categories2TableViewCell") as! Categories2TableViewCell
-        cell.checkBox.tag = indexPath.row
-        cell.checkBox.addTarget(self, action: #selector(checkBoxClicked(_:)), for: .touchUpInside)
-        cell.checkBox.isSelected = false
-        //  CheckBox SelectedItems Conditions
-        if selectedIndex.contains(indexPath.row) {
-            cell.checkBox.isSelected = true
+        /// put a condtion that checks
+            if categories.count < (indexPath.row + 1) {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesButtonTableViewCell")
+                return cell!
+            }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Categories2TableViewCell") as! Categories2TableViewCell
+            cell.checkBox.tag = indexPath.row
+            cell.checkBox.addTarget(self, action: #selector(checkboxClicked(_ :)), for: .touchUpInside)
+            cell.checkBox.isSelected = false
+            ///  CheckBox SelectedItems Conditions
+            if selectedIndex.contains(indexPath.row) {
+                cell.checkBox.isSelected = true
+            }
+            cell.categoriesLbl.text = categories[indexPath.row]
+            return cell
+    }
+    /// Function Of CheckBoxb Action
+    @objc func checkboxClicked(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        
+        if selectedIndex.contains(sender.tag) {
+            selectedIndex.remove(at: selectedIndex.firstIndex(of: sender.tag) ?? -1)
+        } else {
+            selectedIndex.append(sender.tag)
         }
-        cell.categoriesLbl.text = categories[indexPath.row]
-        return cell
+        tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
+    }
+    ///   Function Of Selectd Categories
+    func addselectedCategories() {
+        for tempIndex in selectedIndex {
+            selectedCategories.append(categories[tempIndex])
+        }
     }
 }

@@ -22,7 +22,7 @@ class MuftiProfileTVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        roundView(myView: mainView)
+//        roundView(myView: mainView)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

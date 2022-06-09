@@ -9,7 +9,7 @@ import Foundation
 import Foundation
 
 // MARK: - Welcome
-struct becomeAMuftiModel: Codable {
+struct BecomeAMuftiModel: Codable {
     let status: Bool
     let message: String
     let data: BecomeAMufti

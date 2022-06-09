@@ -24,10 +24,7 @@ class BecomeMuftiTwoVC: UIViewController, UIImagePickerControllerDelegate , UINa
     @IBOutlet weak var experienceToTF: UITextField!
     @IBOutlet weak var experienceFromTF: UITextField!
     @IBOutlet weak var nxtBtn: UIButton!
-    @IBOutlet weak var fieldLbl: UILabel!
-    @IBOutlet weak var eduLbl: UILabel!
-    @IBOutlet weak var infoLbl: UILabel!
-    @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var mainView: UIView!
     // By Ammar
     var name = String()
     var phoneNumber = String()
@@ -42,6 +39,7 @@ class BecomeMuftiTwoVC: UIViewController, UIImagePickerControllerDelegate , UINa
         roundView(myView: instituteNameView)
         roundView(myView: experienceFromView)
         roundView(myView: experienceToView)
+        roundedMainView(myView: mainView)
         print(name)
         print(phoneNumber)
         
@@ -49,6 +47,15 @@ class BecomeMuftiTwoVC: UIViewController, UIImagePickerControllerDelegate , UINa
         self.endDateTF.setInputViewDatePicker(target: self, selector: #selector(endDateDone))
         self.experienceFromTF.setInputViewDatePicker(target: self, selector: #selector(expFromDateDone))
         self.experienceToTF.setInputViewDatePicker(target: self, selector: #selector(expToDateDone))
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.degreeNameTF.text = nil
+        self.startDateTF.text = nil
+        self.endDateTF.text = nil
+        self.instituteNameTF.text = nil
+        self.experienceToTF.text = nil
+        self.experienceFromTF.text = nil
     }
     //    MARK: - Back Btn Action
     @IBAction func becomeMuftiBackBtnAction(_ sender: Any) {
@@ -134,10 +141,21 @@ class BecomeMuftiTwoVC: UIViewController, UIImagePickerControllerDelegate , UINa
     //MARK: - Rounded View Custom Function
     func roundView(myView:UIView) {
         myView.layer.shadowColor = UIColor.gray.cgColor
+        myView.layer.shadowOpacity = 0.3
+        myView.layer.shadowOffset = CGSize.zero
+        myView.layer.shadowRadius = 5.0
+        myView.layer.cornerRadius = 8
+        myView.layer.shouldRasterize = false
+        myView.layer.borderColor = UIColor.lightGray.cgColor
+        myView.layer.borderWidth = 0.3
+        myView.layer.rasterizationScale = UIScreen.main.scale
+    }
+    func roundedMainView(myView:UIView) {
+        myView.layer.shadowColor = UIColor.gray.cgColor
         myView.layer.shadowOpacity = 1
         myView.layer.shadowOffset = .zero
         myView.layer.shadowRadius = 1
-        myView.layer.cornerRadius = 8
+        myView.layer.cornerRadius = 0
     }
     //    MARK: - Custom Function  of Start Date Picker
     @objc func startDateDone() {
@@ -205,28 +223,3 @@ extension UITextField {
     }
     
 }
-////MARK: - Custom Function Of Import Files
-//extension BecomeMuftiTwoVC: UIDocumentPickerDelegate {
-//    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
-//        guard let selectedFilesURL = urls.first else {
-//            return
-//        }
-//        let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-//        let sandboxFileURL = dir.appendingPathComponent(selectedFilesURL.lastPathComponent)
-//
-//        if FileManager.default.fileExists(atPath: sandboxFileURL.path) {
-//            print("Already File Exist")
-//        }
-//        else {
-//
-//            do{
-//                try FileManager.default.copyItem(at: selectedFilesURL, to: sandboxFileURL)
-//                print("Copied Files")
-//            }
-//            catch{
-//                print("Files Are not exist ")
-//
-//            }
-//        }
-//    }
-//}

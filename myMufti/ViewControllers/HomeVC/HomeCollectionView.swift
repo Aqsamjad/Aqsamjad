@@ -24,14 +24,14 @@ class HomeCollectionView: UICollectionViewCell {
     @IBOutlet weak var remainingTimeLbl: UILabel!
     @IBOutlet weak var commentsLbl: UILabel!
     @IBOutlet weak var votesLbl: UILabel!
-
+    
     var now = Date()
-//    @IBOutlet weak var yesSlider: MSCircularSlider!
-//    @IBOutlet weak var noSlider: MSCircularSlider!
+    
     @IBOutlet weak var yesBtn: UIButton!
     @IBOutlet weak var noBtn: UIButton!
     
     var selectedCategory = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -40,40 +40,36 @@ class HomeCollectionView: UICollectionViewCell {
         
         roundView(myView: mainView)
         
+        muftiImages.layer.cornerRadius = 25
+        
         setGradientBackground()
         
     }
-//    MARK: - Bind Data With Api of Collection View Cell 2
+    //    MARK: - Bind Data With Api of Collection View Cell.
+    
     func bindData(aqsaQuestionModel: Dashboard) {
         
         muftiNames.text = aqsaQuestionModel.questionTitle
         questionLbl.text = aqsaQuestionModel.question
         
-        votesLbl.text = String(aqsaQuestionModel.totalVote)
+        votesLbl.text = String(aqsaQuestionModel.userVote)
+        remainingTimeLbl.text = aqsaQuestionModel.timeLimit
         
-//        votesLbl.text = String(aqsaQuestionModel.questionComment)
+        commentsLbl.text = String(aqsaQuestionModel.questionComment)
         
         muftiImages.sd_setImage(with: URL(string: aqsaQuestionModel.userID.image), completed: nil)
         // setting yes and no percentages of the question votes.
         yesPercentage.text = calculateVotesPercentage(yes: aqsaQuestionModel.totalVoteForYes, no: aqsaQuestionModel.totalVoteForNo).0
         noPercentage.text = calculateVotesPercentage(yes: aqsaQuestionModel.totalVoteForYes, no: aqsaQuestionModel.totalVoteForNo).1
-        //  Calculate the value of Circular Slider With Percentage.
-//        let yesSliderValue = calculateSliderPercentage(yes: aqsaQuestionModel.totalVoteForYes, no: aqsaQuestionModel.totalVoteForNo).0
-//        let noSliderValue = calculateSliderPercentage(yes: aqsaQuestionModel.totalVoteForYes, no: aqsaQuestionModel.totalVoteForNo).1
-        
-//        muftiDays.text = aqsaQuestionModel.createdAt
         muftiDays.text = DateManager.standard.getDateFrom(stringDate: aqsaQuestionModel.createdAt).timeAgoDisplay()
         
-//        yesSlider.currentValue = yesSliderValue
-//        noSlider.currentValue = noSliderValue
-        
         let current = Calendar.current.dateComponents(in: .current, from: DateManager.standard.getDateFrom(stringDate: aqsaQuestionModel.timeLimit))
+        
         if let currentHour = current.hour {
             let hoursTillMidnight = 24 - currentHour
             print(hoursTillMidnight)
-            remainingTimeLbl.text = String(hoursTillMidnight)
+    // remainingTimeLbl.text = String(hoursTillMidnight)
         }
-        
     }
     /// this function calcualte the percenate ration for yes and no lbl.
     func calculateVotesPercentage(yes: Int, no: Int) -> (String, String) {
@@ -91,6 +87,7 @@ class HomeCollectionView: UICollectionViewCell {
         return(String(yesPercentage) + "%", String(noPercentage) + "%")
         
     }
+    
     /// this funtion will calculate the value for cicular sliders.
     func calculateSliderPercentage(yes: Int, no: Int) -> (Double, Double) {
         
@@ -104,28 +101,34 @@ class HomeCollectionView: UICollectionViewCell {
         ///         second will return the value of no percentage score.
         return(yesPercentage, noPercentage)
     }
+    
     /// this function will calculate the remaining Hours.
     func calculateRemainingTime(createdTime: String, timeLimit: String) -> String {
         return ""
     }
+    
     func addOrSubtractDay(day:Int)->Date{
+        
         return Calendar.current.date(byAdding: .day, value: day, to: Date())!
     }
-    //    MARK: - Yes Btn Action
+    
+    //    MARK: - Buttons Action
+            /// yes Btn Action.
     @IBAction func yesBtnTapped(_ sender: UIButton) {
         yesBtn.backgroundColor = UIColor(named: "selectedButton")
         noBtn.backgroundColor = UIColor(named: "unselectedButton")
         selectedCategory = "yesBtn"
         
     }
-    //    MARK: - No Btn Action
+    
+            /// No Btn Action
     @IBAction func noBtnTapped(_ sender: UIButton) {
         noBtn.backgroundColor = UIColor(named: "selectedButton")
         yesBtn.backgroundColor = UIColor(named: "unselectedButton")
         selectedCategory = "noBtn"
     }
-}
-extension HomeCollectionView{
+    
+            /// Custom function of rounded circle.
     func roundView(myView:UIView) {
         myView.layer.shadowColor = UIColor.gray.cgColor
         myView.layer.shadowOpacity = 1
@@ -133,15 +136,18 @@ extension HomeCollectionView{
         myView.layer.shadowRadius = 1
         myView.layer.cornerRadius = 20
     }
+    
+            /// Custom function of gradiant color.
     func setGradientBackground() {
         let colorTop =  UIColor(red: 116/255, green: 168/255, blue: 130/255, alpha: 1).cgColor
         let colorBottom = UIColor(red: 66/255, green: 99/255, blue: 75/255, alpha: 1).cgColor
-                    
+        
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop, colorBottom]
         gradientLayer.locations = [0.0, 1.0]
         gradientLayer.frame = self.mainView.bounds
-                
+        
         self.mainView.layer.insertSublayer(gradientLayer, at:0)
     }
 }
+

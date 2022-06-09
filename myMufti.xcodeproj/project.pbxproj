@@ -36,12 +36,14 @@
 		131DF3672800889B00144877 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131DF3662800889B00144877 /* CategoriesModel.swift */; };
 		132DF6E027F83BC9006C4404 /* MuftiAnswer'sModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132DF6DF27F83BC9006C4404 /* MuftiAnswer'sModel.swift */; };
 		13B72ED427F2FA1000A3E513 /* FullQuestionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B72ED327F2FA1000A3E513 /* FullQuestionsModel.swift */; };
+		4A4463052851DFF0009EB3A2 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4463042851DFF0009EB3A2 /* ButtonTableViewCell.swift */; };
+		4A4463072851EF02009EB3A2 /* CategoriesButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4463062851EF02009EB3A2 /* CategoriesButtonTableViewCell.swift */; };
+		4A4463092851F635009EB3A2 /* FullQuestions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4463082851F635009EB3A2 /* FullQuestions.storyboard */; };
 		701DBA0A27914A2500F40B9F /* BecomeMuftiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701DBA0927914A2500F40B9F /* BecomeMuftiVC.swift */; };
 		701DBA1327915A4B00F40B9F /* BecomeMuftiTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701DBA1227915A4B00F40B9F /* BecomeMuftiTwoVC.swift */; };
 		701DBA1827916A7300F40B9F /* BecomeMuftiThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701DBA1727916A7300F40B9F /* BecomeMuftiThreeVC.swift */; };
 		7022B05E27CF847100B27E0A /* Categories2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7022B05D27CF847100B27E0A /* Categories2TableViewCell.swift */; };
 		7022B06227CF848C00B27E0A /* Categories2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7022B06127CF848C00B27E0A /* Categories2ViewController.swift */; };
-		7030B9ED27BA2719000A44D5 /* FullQuestions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7030B9EC27BA2719000A44D5 /* FullQuestions.storyboard */; };
 		703352652771EDB80015B1EC /* ChatTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703352642771EDB80015B1EC /* ChatTableVC.swift */; };
 		7039AACB2784156300A79F5C /* HistoryTViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7039AACA2784156300A79F5C /* HistoryTViewCell.swift */; };
 		7039AACE2784160B00A79F5C /* PreferencesTableVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7039AACD2784160B00A79F5C /* PreferencesTableVCell.swift */; };
@@ -62,7 +64,6 @@
 		704ED2632785AC54001B03E5 /* FullQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704ED2622785AC54001B03E5 /* FullQuestionVC.swift */; };
 		705176DD278D41F7008EC5EF /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705176DC278D41F7008EC5EF /* HomeVC.swift */; };
 		70532D0C279020C6004E873D /* QuestionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70532D0B279020C6004E873D /* QuestionsVC.swift */; };
-		7054430C27B7AC3E00180FD8 /* FullQuestionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7054430B27B7AC3E00180FD8 /* FullQuestionsCollectionViewCell.swift */; };
 		7054AF0827B0F572008AE46E /* UpdatePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7054AF0727B0F572008AE46E /* UpdatePasswordVC.swift */; };
 		7056BB0E27E0581C000F790B /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7056BB0D27E0581C000F790B /* HistoryModel.swift */; };
 		705BE58227CE30CB00423BF7 /* GoogleWithLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705BE58127CE30CB00423BF7 /* GoogleWithLoginModel.swift */; };
@@ -133,12 +134,14 @@
 		132DF6DF27F83BC9006C4404 /* MuftiAnswer'sModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MuftiAnswer'sModel.swift"; sourceTree = "<group>"; };
 		13B72ED327F2FA1000A3E513 /* FullQuestionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullQuestionsModel.swift; sourceTree = "<group>"; };
 		28C438ED667B7857D65D2591 /* Pods_myMufti.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myMufti.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A4463042851DFF0009EB3A2 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
+		4A4463062851EF02009EB3A2 /* CategoriesButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesButtonTableViewCell.swift; sourceTree = "<group>"; };
+		4A4463082851F635009EB3A2 /* FullQuestions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FullQuestions.storyboard; sourceTree = "<group>"; };
 		701DBA0927914A2500F40B9F /* BecomeMuftiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BecomeMuftiVC.swift; sourceTree = "<group>"; };
 		701DBA1227915A4B00F40B9F /* BecomeMuftiTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BecomeMuftiTwoVC.swift; sourceTree = "<group>"; };
 		701DBA1727916A7300F40B9F /* BecomeMuftiThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BecomeMuftiThreeVC.swift; sourceTree = "<group>"; };
 		7022B05D27CF847100B27E0A /* Categories2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories2TableViewCell.swift; sourceTree = "<group>"; };
 		7022B06127CF848C00B27E0A /* Categories2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories2ViewController.swift; sourceTree = "<group>"; };
-		7030B9EC27BA2719000A44D5 /* FullQuestions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FullQuestions.storyboard; sourceTree = "<group>"; };
 		703352642771EDB80015B1EC /* ChatTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableVC.swift; sourceTree = "<group>"; };
 		7039AACA2784156300A79F5C /* HistoryTViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTViewCell.swift; sourceTree = "<group>"; };
 		7039AACD2784160B00A79F5C /* PreferencesTableVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTableVCell.swift; sourceTree = "<group>"; };
@@ -159,7 +162,6 @@
 		704ED2622785AC54001B03E5 /* FullQuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullQuestionVC.swift; sourceTree = "<group>"; };
 		705176DC278D41F7008EC5EF /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		70532D0B279020C6004E873D /* QuestionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsVC.swift; sourceTree = "<group>"; };
-		7054430B27B7AC3E00180FD8 /* FullQuestionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullQuestionsCollectionViewCell.swift; sourceTree = "<group>"; };
 		7054AF0727B0F572008AE46E /* UpdatePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordVC.swift; sourceTree = "<group>"; };
 		7056BB0D27E0581C000F790B /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 		705BE58127CE30CB00423BF7 /* GoogleWithLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleWithLoginModel.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 			children = (
 				701DBA1727916A7300F40B9F /* BecomeMuftiThreeVC.swift */,
 				704EC4CD27B7887B00DD9A62 /* FeildTableViewCell.swift */,
+				4A4463042851DFF0009EB3A2 /* ButtonTableViewCell.swift */,
 			);
 			path = BecomeMuftiThreeVC;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			children = (
 				7022B06127CF848C00B27E0A /* Categories2ViewController.swift */,
 				7022B05D27CF847100B27E0A /* Categories2TableViewCell.swift */,
+				4A4463062851EF02009EB3A2 /* CategoriesButtonTableViewCell.swift */,
 			);
 			path = CategoriesVC2;
 			sourceTree = "<group>";
@@ -373,7 +377,6 @@
 			isa = PBXGroup;
 			children = (
 				704ED2622785AC54001B03E5 /* FullQuestionVC.swift */,
-				7054430B27B7AC3E00180FD8 /* FullQuestionsCollectionViewCell.swift */,
 				704C0FCD27C6426A0072A9AC /* FullQuestionsTableViewCell.swift */,
 			);
 			path = FullQuestionVC;
@@ -436,7 +439,7 @@
 				705C32E927A263E3006C891C /* SignUp.storyboard */,
 				705C32EC27A2643A006C891C /* ForgotPassword.storyboard */,
 				705C32EF27A2652E006C891C /* Profile.storyboard */,
-				7030B9EC27BA2719000A44D5 /* FullQuestions.storyboard */,
+				4A4463082851F635009EB3A2 /* FullQuestions.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -722,6 +725,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				705C32F027A2652E006C891C /* Profile.storyboard in Resources */,
+				4A4463092851F635009EB3A2 /* FullQuestions.storyboard in Resources */,
 				046A04BF2801766D0074C970 /* Poppins-Medium.ttf in Resources */,
 				046A04BE2801766D0074C970 /* Poppins-Light.ttf in Resources */,
 				70CC2B3F2763609E00C3D811 /* LaunchScreen.storyboard in Resources */,
@@ -736,7 +740,6 @@
 				705C32ED27A2643A006C891C /* ForgotPassword.storyboard in Resources */,
 				70B9D9EE27B6522C0091DF38 /* BecomeMuftiDone.gif in Resources */,
 				046A04BC2801766D0074C970 /* Poppins-ExtraLightItalic.ttf in Resources */,
-				7030B9ED27BA2719000A44D5 /* FullQuestions.storyboard in Resources */,
 				046A04BB2801766D0074C970 /* Poppins-ThinItalic.ttf in Resources */,
 				046A04C22801766D0074C970 /* Poppins-ExtraBold.ttf in Resources */,
 				046A04C62801766D0074C970 /* Poppins-LightItalic.ttf in Resources */,
@@ -838,18 +841,19 @@
 				70CC2B372763609500C3D811 /* LoginVC.swift in Sources */,
 				70D1518F2768697C00A8154E /* RegisterVC.swift in Sources */,
 				131DF3672800889B00144877 /* CategoriesModel.swift in Sources */,
+				4A4463072851EF02009EB3A2 /* CategoriesButtonTableViewCell.swift in Sources */,
 				70CC2B332763609500C3D811 /* AppDelegate.swift in Sources */,
 				046A049E280167FA0074C970 /* UIViewExtension.swift in Sources */,
 				70CC2B352763609500C3D811 /* SceneDelegate.swift in Sources */,
 				701DBA1327915A4B00F40B9F /* BecomeMuftiTwoVC.swift in Sources */,
 				705BE58227CE30CB00423BF7 /* GoogleWithLoginModel.swift in Sources */,
 				70F998C02782C30700AD35C2 /* PrivacyPolicyVC.swift in Sources */,
+				4A4463052851DFF0009EB3A2 /* ButtonTableViewCell.swift in Sources */,
 				704E15E927B51678008C6FAC /* HomeCollectionView.swift in Sources */,
 				701DBA0A27914A2500F40B9F /* BecomeMuftiVC.swift in Sources */,
 				70F998B62782BDEF00AD35C2 /* ChangeUsernameVC.swift in Sources */,
 				704E285727C8A6BE007C77E8 /* CommentTableViewCell.swift in Sources */,
 				70B9D9E627B650BE0091DF38 /* BecomeMuftiDoneVC.swift in Sources */,
-				7054430C27B7AC3E00180FD8 /* FullQuestionsCollectionViewCell.swift in Sources */,
 				7054AF0827B0F572008AE46E /* UpdatePasswordVC.swift in Sources */,
 				70F5E7EB27855F1A00B9B14C /* AskQuestionVC.swift in Sources */,
 				701DBA1827916A7300F40B9F /* BecomeMuftiThreeVC.swift in Sources */,

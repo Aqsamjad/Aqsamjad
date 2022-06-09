@@ -13,6 +13,7 @@ import SDWebImage
 
 class BecomeMuftiThreeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     var degreeName = String()
@@ -32,6 +33,7 @@ class BecomeMuftiThreeVC: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        roundedMainView(myView: mainView)
         print(name)
         print(phone_Number)
         
@@ -41,10 +43,9 @@ class BecomeMuftiThreeVC: UIViewController, UITableViewDataSource, UITableViewDe
         self.navigationController?.popViewController(animated: true)
     }
     //    MARK: - checkBox BTn Action
-    @IBAction func submitBtnAction(_ sender: Any) {
+    @IBAction func submitBtnAction(_ sender: UIButton) {
         addselectedCategories()
         callBecomeAMuftiAPI()
-        
         
     }
     ///-    Function Of Selectd Categories
@@ -67,8 +68,15 @@ class BecomeMuftiThreeVC: UIViewController, UITableViewDataSource, UITableViewDe
     //    MARK: - Custom Fuction of Move to Done Scren
     func moveToDoneBecomeAmUftiScreen() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let destinationViewController:UIViewController  = storyboard.instantiateViewController(withIdentifier: "BecomeMuftiDoneVC") as! BecomeMuftiDoneVC
-        self.navigationController?.pushViewController(destinationViewController, animated: true)
+        let doneVC: UIViewController  = storyboard.instantiateViewController(withIdentifier: "BecomeMuftiDoneVC") as! BecomeMuftiDoneVC
+        self.navigationController?.pushViewController(doneVC, animated: true)
+    }
+    func roundedMainView(myView:UIView) {
+        myView.layer.shadowColor = UIColor.gray.cgColor
+        myView.layer.shadowOpacity = 1
+        myView.layer.shadowOffset = .zero
+        myView.layer.shadowRadius = 1
+        myView.layer.cornerRadius = 0
     }
     //MARK: - Custom Function of Table View Cell
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -76,20 +84,20 @@ class BecomeMuftiThreeVC: UIViewController, UITableViewDataSource, UITableViewDe
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         /// put a condtion that checks
-        if categories.count < (indexPath.row + 1) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DoneBtnCell")
-            return cell!
-        }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FeildTableViewCell") as! FeildTableViewCell
-        cell.checkBox.tag = indexPath.row
-        cell.checkBox.addTarget(self, action: #selector(checkboxClicked(_ :)), for: .touchUpInside)
-        cell.checkBox.isSelected = false
-        ///  CheckBox SelectedItems Conditions
-        if selectedIndex.contains(indexPath.row) {
-            cell.checkBox.isSelected = true
-        }
-        cell.feildLbl.text = categories[indexPath.row]
-        return cell
+            if categories.count < (indexPath.row + 1) {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonTableViewCell")
+                return cell!
+            }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FeildTableViewCell", for: indexPath) as! FeildTableViewCell
+            cell.checkBox.tag = indexPath.row
+            cell.checkBox.addTarget(self, action: #selector(checkboxClicked(_ :)), for: .touchUpInside)
+            cell.checkBox.isSelected = false
+            ///  CheckBox SelectedItems Conditions
+            if selectedIndex.contains(indexPath.row) {
+                cell.checkBox.isSelected = true
+            }
+            cell.feildLbl.text = categories[indexPath.row]
+            return cell
     }
     /// Funcion of TextFeilds Alert
     func asqa_Alert(message: String) {
@@ -105,6 +113,7 @@ class BecomeMuftiThreeVC: UIViewController, UITableViewDataSource, UITableViewDe
         // convert image into base64String
         guard let compressedImage = degree_image?.jpegData(compressionQuality : 0.0) else {print("image not compressed");return}
         let documentImg = compressedImage.base64EncodedString()
+        
         let  parameter = [
             "user_id": UserDefaults.standard.string(forKey: UserDefaultsKeys.user_id.rawValue) ?? "",
             "name":name,
@@ -128,7 +137,7 @@ class BecomeMuftiThreeVC: UIViewController, UITableViewDataSource, UITableViewDe
                 print(String(data: data, encoding: .utf8) as Any)
                 let decoder = JSONDecoder()
                 do {
-                    let becomeMuftiModel = try decoder.decode(becomeAMuftiModel.self, from: data)
+                    let becomeMuftiModel = try decoder.decode(BecomeAMuftiModel.self, from: data)
                     
                     if becomeMuftiModel.status == true {
                         // move to next screen home
