@@ -17,5 +17,6 @@ target 'myMufti' do
   pod 'GoogleSignIn'
   pod 'UBottomSheet'
   pod 'Floaty'
+  pod 'DropDown'
 
 end

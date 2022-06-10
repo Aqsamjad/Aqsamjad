@@ -43,22 +43,22 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygl-CP-xqT">
-                                                                <rect key="frame" x="151" y="0.0" width="48.5" height="21"/>
+                                                                <rect key="frame" x="147.5" y="0.0" width="55" height="25.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="18"/>
                                                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Paf-yy-Adg">
-                                                                <rect key="frame" x="237" y="0.0" width="113" height="30"/>
+                                                                <rect key="frame" x="227.5" y="0.0" width="122.5" height="30"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a scholar?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4p-M2-kcj">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="58.5" height="30"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="65" height="30"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="7"/>
                                                                         <color key="textColor" systemColor="systemBackgroundColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3a-cX-hI9" customClass="RoundedButton" customModule="myMufti" customModuleProvider="target">
-                                                                        <rect key="frame" x="63.5" y="0.0" width="49.5" height="30"/>
+                                                                        <rect key="frame" x="70" y="0.0" width="52.5" height="30"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Join Us!">
@@ -92,7 +92,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IN-LI-bbu" customClass="RoundedButton" customModule="myMufti" customModuleProvider="target">
-                                                                <rect key="frame" x="10" y="124" width="89.5" height="26"/>
+                                                                <rect key="frame" x="10" y="122" width="96.5" height="28"/>
                                                                 <color key="backgroundColor" red="0.082352941176470587" green="0.29019607843137252" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Ask Mufti Now">
@@ -116,13 +116,13 @@
                                                         <rect key="frame" x="0.0" y="250" width="350" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMb-6A-bsV">
-                                                                <rect key="frame" x="0.0" y="0.0" width="108.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="123" height="30"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Tb-od-wqE" customClass="RoundedButton" customModule="myMufti" customModuleProvider="target">
-                                                                <rect key="frame" x="275.5" y="0.0" width="74.5" height="30"/>
+                                                                <rect key="frame" x="270" y="0.0" width="80" height="30"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Post a Question">
@@ -239,7 +239,7 @@
                                                                                                             </connections>
                                                                                                         </button>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfg-Ic-nnY">
-                                                                                                            <rect key="frame" x="66" y="72" width="38.5" height="21"/>
+                                                                                                            <rect key="frame" x="66.5" y="70" width="37" height="25.5"/>
                                                                                                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                                                                                                             <color key="textColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                             <nil key="highlightedColor"/>
@@ -281,7 +281,7 @@
                                                                                                             </connections>
                                                                                                         </button>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbL-Gx-Nt1">
-                                                                                                            <rect key="frame" x="66" y="72" width="38.5" height="21"/>
+                                                                                                            <rect key="frame" x="66.5" y="70" width="37" height="25.5"/>
                                                                                                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                                                                                                             <color key="textColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                             <nil key="highlightedColor"/>
@@ -1536,7 +1536,7 @@ Submission </string>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkO-et-bbV">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="45"/>
-                                        <state key="normal" title="Button"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
                                         <connections>
                                             <action selector="categoryDidTapped:" destination="1li-ga-MJT" eventType="touchUpInside" id="yg9-ps-TqG"/>
@@ -1724,10 +1724,10 @@ Submission </string>
                             <constraint firstItem="KvM-rD-fBI" firstAttribute="bottom" secondItem="0Tc-e7-ug7" secondAttribute="bottom" constant="30" id="11i-C0-sqX"/>
                             <constraint firstItem="KvM-rD-fBI" firstAttribute="trailing" secondItem="2jr-I0-yOO" secondAttribute="trailing" constant="20" id="3A5-4n-ui1"/>
                             <constraint firstItem="vmd-on-gBS" firstAttribute="leading" secondItem="Jgb-nI-tTz" secondAttribute="leading" constant="20" id="5af-rj-Ubd"/>
-                            <constraint firstItem="Bue-CZ-XrR" firstAttribute="top" secondItem="2jr-I0-yOO" secondAttribute="bottom" id="86Z-Mj-gMC"/>
                             <constraint firstItem="0Tc-e7-ug7" firstAttribute="top" secondItem="Bue-CZ-XrR" secondAttribute="bottom" id="CLK-WQ-VVi"/>
                             <constraint firstItem="2jr-I0-yOO" firstAttribute="leading" secondItem="KvM-rD-fBI" secondAttribute="leading" constant="20" id="Egb-iU-cVO"/>
                             <constraint firstItem="KvM-rD-fBI" firstAttribute="trailing" secondItem="vmd-on-gBS" secondAttribute="trailing" constant="20" id="Ipo-nP-VKC"/>
+                            <constraint firstItem="Bue-CZ-XrR" firstAttribute="top" secondItem="2jr-I0-yOO" secondAttribute="bottom" id="K7Y-IA-bFJ"/>
                             <constraint firstItem="2jr-I0-yOO" firstAttribute="top" secondItem="KvM-rD-fBI" secondAttribute="top" id="LfX-0M-pDg"/>
                             <constraint firstItem="0Tc-e7-ug7" firstAttribute="leading" secondItem="KvM-rD-fBI" secondAttribute="leading" constant="20" id="PgS-EN-q8I"/>
                             <constraint firstItem="pMt-vT-UCs" firstAttribute="leading" secondItem="KvM-rD-fBI" secondAttribute="leading" constant="20" id="QbT-da-m9p"/>
@@ -1803,13 +1803,13 @@ Submission </string>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="QmK-Tc-7J6">
                                                     <rect key="frame" x="83" y="21.5" width="37" height="33.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAN-Af-Eda">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAN-Af-Eda">
                                                             <rect key="frame" x="0.0" y="0.0" width="37" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                             <color key="textColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJY-MV-mbS">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJY-MV-mbS">
                                                             <rect key="frame" x="0.0" y="19" width="37" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="0.67843137254901964" green="0.70980392156862748" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
@@ -1999,7 +1999,7 @@ Submission </string>
         <image name="mufti_1" width="43" height="43"/>
         <image name="searchimage" width="68" height="69"/>
         <namedColor name="BecomeMuftiVCHeading">
-            <color red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.31000000238418579" green="0.31000000238418579" blue="0.31000000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="appTextColor">
             <color red="0.23137254901960785" green="0.4823529411764706" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

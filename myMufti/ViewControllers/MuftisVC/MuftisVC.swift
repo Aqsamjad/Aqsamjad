@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DropDown
 
 
 class MuftisVC: UIViewController , UITextFieldDelegate {
@@ -28,6 +29,9 @@ class MuftisVC: UIViewController , UITextFieldDelegate {
     @IBOutlet weak var searchView: UIView!
     
     @IBOutlet weak var submitBtn: UIButton!
+    
+    var dropDown = DropDown()
+    
     var KUTTypedPlainText = String()
     
     let categories = ["Family law" , "Finance" , "Home Finance" , "Marriage" , "Relationship" , "Dhikir" , "Duas" , "Raising kids" , "Parents" , "Salah" , "Dawah" , "Competitive religion" , "Comparative religion"]
@@ -64,15 +68,15 @@ class MuftisVC: UIViewController , UITextFieldDelegate {
     
     @IBAction func categoryDidTapped(_ sender: Any) {
         
-//        dropDown.dataSource = categories
-//        dropDown.anchorView = (sender as! AnchorView)
-//        dropDown.bottomOffset = CGPoint(x: 0, y: (sender as AnyObject).frame.size.height)
-//        dropDown.show()
-//        dropDown.selectionAction = { [weak self] (index: Int, item: String) in
-//            guard let _ = self else { return }
-//            self!.categoriesTF.text = item
+        dropDown.dataSource = categories
+        dropDown.anchorView = (sender as! AnchorView)
+        dropDown.bottomOffset = CGPoint(x: 0, y: (sender as AnyObject).frame.size.height)
+        dropDown.show()
+        dropDown.selectionAction = { [weak self] (index: Int, item: String) in
+            guard let _ = self else { return }
+            self!.categoryTF.text = item
             
-//        }
+        }
     }
     /// Custom function of TextField delegate methods.
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
